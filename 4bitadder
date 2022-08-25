@@ -1,0 +1,21 @@
+AHPLMODULE : fourbitadder . 
+
+INPUTS: a<4>;
+	b<4>;
+	cin.
+		  
+OUTPUTS:s<5>;
+
+EXINPUTS:  fulladder[{a,a<3>};{b,b<3>};{cin,cout<2>};{s,s<0>};{cout,cout<3>}]
+	  ;fulladder[{a,a<2>};{b,b<2>};{cin,cout<1>};{s,s<0>};{cout,cout<2>}]
+	  ;fulladder[{a,a<1>};{b,b<1>};{cin,cout<0>};{s,s<0>};{cout,cout<1>}]
+	  ;fulladder[{a,a<0>};{b,b<0>};{cin,cin}    ;{s,s<0>};{cout,cout<0>}].
+BODY
+s = s.
+END
+
+
+mend
+
+
+comsec

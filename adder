@@ -1,0 +1,20 @@
+AHPLMODULE : fulladder . 
+
+INPUTS: a;
+	b;
+	cin.
+		  
+OUTPUTS:s;
+        cout.
+
+
+BODY
+s = (^a & ^b & cin) + (^a &  b & ^cin) + ( a & ^b & ^cin) + ( a &  b & cin).
+cout = (^a &  b &  cin) + ( a & ^b &  cin) + ( a &  b & ^cin) + ( a &  b &  cin).
+END
+
+
+mend
+
+
+comsec

@@ -1,0 +1,49 @@
+<system>   ::= <module> {<module>} <comsec>
+<module>   ::= <mheader> <mdclr> <mbody> <mend>
+<mheader>  ::= AHPLMODULE : id.
+<mdclr>    ::= { <inputs> | <exinputs> | <outputs> |
+	       | <buses>  | <exbuses>  | <memory>
+	       | clunits }
+<inputs>   ::= INPUTS: <aid1> {; <aid1>}. // tiene sentido añadir un arreglo bidimensional como 
+					  // una entrada?? (tomamos la desicion de prohbirlo
+					  //		    explicitamente como regla       )
+					     
+<exinputs> ::= EXINPUTS: <exaid> {; <exaid>}. // se asume como entrada externa 
+					      // (toca redefinir este formato para mas facilidad)
+
+<outputs>  ::= OUTPUTS: <aid1> {; <aid1>}.// tiene sentido añadir un arreglo bidimensional como
+					  // una salida?(tomamos la desicion de prohbirlo
+					  // 		 explicitamente como regla       )
+					  
+<buses>    ::= BUSES:   <aid> {; <aid>}.  
+
+<exbuses>  ::= EXBUSES: <exaid> {; <exaid>}.  // se asume como entrada externa 
+					      // (toca redefinir este formato para mas facilidad)
+
+<memory>   ::= MEMORY:  <aid> {; <aid>}.
+
+<clunits>  ::= CLUNITS: <aid> {; <aid>}.
+
+<aid>	   ::= id ['<'num'>'] | id '<'num'>' ['['num']'] // no se puede definir una columna sin
+							 // primero definir una fila
+
+/************************************************************************************************/
+<exaid>	   ::= <id> '[' {exaidw {;exaidw}} ']' //esta declaracion permite definir las unidades
+						//externas de manera mas simple y similar al VHDL
+<exaidw>   ::= '{'<aid1> , <aid2>'}'
+/************************************************************************************************/
+
+<aid1>	   ::= id ['<'num'>']          // solo se puede crear una fila del tamaño que yo quiera
+
+<aid2>     ::= id ['<'num [: num] '>'] // puedo tomar segmentos de un arreglo siempre 
+				   //que este declarado					     
+	       
+ 
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+for a job resume:
+I have experience in the fields of Hardware description languages such as VHDL and verilog. I also have experiences working in projects such as VGA driver controlled by computer along at FPGA and a translator of AHPL (an ancient hardware description language based on RTL) to VHDL with C OOP which have allowed me to gain the necessary experience for me to consider myself as a good fit for this role. And not leaving aside my ability to get up and run in the role quickly.

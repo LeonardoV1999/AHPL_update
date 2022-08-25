@@ -1,0 +1,38 @@
+AHPLMODULE : modulo . 
+
+INPUTS: a<5>;
+	b<6>;
+	c;
+	d;
+	e<6>;
+	f;
+	yacc<23>.
+	
+EXINPUTS: guillo[{m<5>,n};{otro,de};{prueba,equisde}];
+          f[{giraldito<25>,a}];
+	  leonardo[{a,l}];
+	  liliana[{e,l};{u,y};{x,w}];
+	  neil[{luis,miguel};{alberto,santander};{unomas,deprueba}].
+	  
+OUTPUTS:leonardo<35>;
+	jose<45>;
+	viana;
+	xd;
+	vedad<6>.
+buses
+exbuses
+MEMORY: x.
+clunits
+
+BODY
+a = b & c + d.
+b = c @ d @ e .
+xd = a & b + c @ d.
+END
+
+
+mend
+
+
+comsec
+
